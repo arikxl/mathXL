@@ -7,23 +7,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <header>
-        <div class="flex">
-            <p><span id="xpSpan"></span>xp</p>
-            <h1>יהונתן</h1>
-        </div>
-        <nav >
-            <ul class="flex">
-                <li onclick="changeOperator('+')">+</li>
-                <li onclick="changeOperator('-')">-</li>
-                <li onclick="changeOperator('x')">x</li>
-                <li onclick="changeOperator('÷')">÷</li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
+    <div class="game">
+
+        <header>
+            <div class="flex">
+                <p><span id="xpSpan"></span>xp</p>
+                <h1>יהונתן</h1>
+            </div>
+            <nav >
+                <ul class="flex">
+                    <li onclick="changeOperator('+')">+</li>
+                    <li onclick="changeOperator('-')">-</li>
+                    <li onclick="changeOperator('x')">x</li>
+                    <li onclick="changeOperator('÷')">÷</li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
             <section class="question flex">
                 <h3 id="num1H3"></h3>
                 <h3 id="operatorH3"></h3>
@@ -31,7 +32,7 @@
                 <h3 >=</h3>
                 <h3>?</h3>
             </section>
-
+            
             <section class="options flex">
                 <div class="option flex" id="option1" onclick="guess('option1')"></div>
                 <div class="option flex" id="option2" onclick="guess('option2')"></div>
@@ -46,6 +47,7 @@
             <span id="prizeSpan">250</span><span>xp</span>
         </footer>
 
-    <script type="text/javascript" src="main.js"></script>
+    </div>
+        <script type="text/javascript" src="main.js"></script>
 </body>
 </html>

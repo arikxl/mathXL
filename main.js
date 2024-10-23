@@ -6,11 +6,14 @@ const num1H3 = document.getElementById('num1H3');
 const num2H3 = document.getElementById('num2H3');
 const xpSpan = document.getElementById('xpSpan');
 
-const prizeXP=[4,100,250,555,999,1250,1515,1890,2222,2555,2999,3333,3693,4000,4444,4864,5000]
+let audio = new Audio('win.wav');
+
+
+const prizeXP=[100,250,555,999,1250,1515,1890,2222,2555,2999,3333,3693,4000,4444,4864,5000]
 let goalIndx = localStorage.getItem('MathGoalIndx') ||0;
 let currentGoal = prizeXP[goalIndx];
 
-let xp = localStorage.getItem('Math-xp') ||0;
+let xp = +localStorage.getItem('Math-xp') ||0;
 let answer;
 let operatorG = '+';
 let num1G;
@@ -127,9 +130,17 @@ function createOptions(rndNum1,rndNum2,operator) {
 }
 
 function guess(id) {
+
+    let pointsPlus;
+    if (operatorG === 'x' || operatorG === '÷') {
+        pointsPlus = 2;
+    } else {
+        pointsPlus = 1;
+    }
+
     const playerGuess = document.getElementById(id);
     if (+playerGuess.innerHTML === answer) {
-        xp++;
+        xp =xp+pointsPlus;
         localStorage.setItem('Math-xp', xp);
         xpSpan.innerHTML = xp;
     } else {
@@ -144,7 +155,8 @@ function guess(id) {
 }
 
 function howMuchToPrize() {
-    if (xp === currentGoal) {
+    if (xp >= currentGoal) {
+        audio.play()
         alert('גש לאמא או אבא לקבל פרס');
         goalIndx++;
         localStorage.setItem('MathGoalIndx', goalIndx);

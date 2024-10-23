@@ -19,13 +19,17 @@
 
 body{
     text-align: center;
-    height: 100vh;
-    overflow-y: hidden;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 400px;
+    overflow-y: hidden;
+}
+
+.game{
+    height: 100vh;
     margin: auto;
+    width: 400px;
+
 }
 
 main{
@@ -89,6 +93,7 @@ section{
     height: 70%;
     font-size: 70px;
     gap: 10px;
+    letter-spacing: 5px;
 }
 
 .question h3:nth-child(5){
@@ -125,6 +130,6 @@ footer{
     height: 10vh;
     background-color: var(--blue);
     font-size: 25px;
-      font-family: "Heebo", sans-serif;
+    font-family: "Heebo", sans-serif;
 
 }
