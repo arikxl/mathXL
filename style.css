@@ -93,12 +93,14 @@ section{
     height: 45vh;
     font-size: 70px;
     gap: 10px;
-    letter-spacing: 5px;
-    font-weight: normal;
+    letter-spacing: 2px;
 }
 
-.question h3:nth-child(4){
+.question h3{
+    font-weight:100;
 }
+
+
 .question h3:nth-child(5){
     color: gray;
 }
