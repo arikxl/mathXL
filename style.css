@@ -90,14 +90,15 @@ section{
 
 
 .question{
-    height: 50vh;
+    height: 45vh;
     font-size: 70px;
     gap: 10px;
     letter-spacing: 5px;
 }
 
-.question h3:nth-child(3){
+.question h3:nth-child(4){
     font-family: sans-serif;
+    font-weight: bold;
 }
 .question h3:nth-child(5){
     color: gray;
