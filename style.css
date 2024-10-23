@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+
+:root {
+  --blue: #2ab7ca;
+  --red: #fe4a49;
+  --yellow: #fed766;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Luckiest Guy", cursive;
+
+}
+
+
+
+body{
+    text-align: center;
+    height: 100vh;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+    margin: auto;
+}
+
+main{
+    min-width: 400px;
+    height: 70vh;
+    /* margin:0 auto; */
+    /* background-color: aquamarine; */
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+header{
+    height: 20vh;
+    margin: 0;
+}
+header .flex{
+    padding:10px 20px;
+    background-color: var(--blue);
+    color: white;
+    justify-content: space-between;
+}
+
+#xpSpan{
+    color:bisque;
+}
+
+h1{
+      font-family: "Heebo", sans-serif;
+}
+
+ul{
+    list-style: none; 
+    gap: 5px;
+    background-color: white !important;
+    color: black !important;
+    padding: 0 !important;
+}
+
+li{
+    flex: 1;
+    background-color: gray;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 35px;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+section{
+    padding: 10px;
+    /* width: 100%; */
+}
+
+
+.question{
+    height: 70%;
+    font-size: 70px;
+    gap: 10px;
+}
+
+.question h3:nth-child(5){
+    color: gray;
+}
+
+.options{
+    gap: 10px;
+    justify-content: flex-end !important;
+    width: 90%;
+    margin: 0 auto 10px ;
+}
+
+.option{
+    flex: 1;
+    aspect-ratio: 1/1;
+    font-size: 50px;
+    cursor: pointer;
+    color: white;
+    transition: 1s;
+}
+
+#option1{
+    background-color:steelblue;
+}
+#option2{
+    background-color: var(--red);
+}
+#option3{
+    background-color: var(--yellow);
+}
+
+footer{
+    height: 10vh;
+    background-color: var(--blue);
+    font-size: 25px;
+      font-family: "Heebo", sans-serif;
+
+}
