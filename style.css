@@ -97,8 +97,7 @@ section{
 }
 
 .question h3:nth-child(4){
-    font-family: sans-serif;
-    font-weight: bold;
+    font-weight: normal;
 }
 .question h3:nth-child(5){
     color: gray;
